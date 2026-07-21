@@ -1,9 +1,6 @@
-// ============================
-// Tower of Hanoi Game
-// Part 1
-// ============================
 
-// Towers
+// Tower of Hanoi Game
+
 const towers = [
     document.getElementById("tower1"),
     document.getElementById("tower2"),
@@ -28,9 +25,9 @@ const timerText = document.getElementById("timer");
 const popup = document.getElementById("popup");
 const finalMoves = document.getElementById("finalMoves");
 
-// ============================
+
 // Variables
-// ============================
+
 
 let diskCount = 3;
 let moveCount = 0;
@@ -46,9 +43,9 @@ let towerData = [
     []
 ];
 
-// ============================
+
 // Initialize Game
-// ============================
+
 
 function initializeGame() {
 
@@ -82,9 +79,9 @@ function initializeGame() {
     createDisks();
 }
 
-//
+
 // Create Disks
-//
+
 
 function createDisks() {
 
@@ -109,10 +106,6 @@ function createDisks() {
     }
 
 }
-// ============================
-// Tower of Hanoi Game
-// Part 2
-// ============================
 
 // Start Timer
 function startTimer() {
@@ -131,10 +124,6 @@ function startTimer() {
     }, 1000);
 }
 
-// ============================
-// Tower Click Events
-// ============================
-
 towers.forEach((tower, index) => {
 
     tower.addEventListener("click", () => {
@@ -145,9 +134,7 @@ towers.forEach((tower, index) => {
 
 });
 
-// ============================
 // Handle Tower Click
-// ============================
 
 function handleTowerClick(index) {
 
@@ -180,9 +167,7 @@ function handleTowerClick(index) {
     selectedTower = null;
 }
 
-// ============================
 // Move Disk
-// ============================
 
 function moveDisk(from, to) {
 
@@ -214,10 +199,6 @@ function moveDisk(from, to) {
 
     checkWin();
 }
-// ============================
-// Tower of Hanoi Game
-// Part 3
-// ============================
 
 // Update Board
 function updateBoard() {
@@ -254,9 +235,7 @@ function updateBoard() {
 
 }
 
-// ============================
 // Check Win
-// ============================
 
 function checkWin() {
 
@@ -271,10 +250,6 @@ function checkWin() {
     }
 
 }
-
-// ============================
-// Button Events
-// ============================
 
 // Start Game
 startBtn.addEventListener("click", () => {
@@ -302,10 +277,6 @@ playAgain.addEventListener("click", () => {
     startTimer();
 
 });
-// ============================
-// Tower of Hanoi Game
-// Part 4 (Final)
-// ============================
 
 // Delay Function
 function sleep(ms) {
@@ -355,9 +326,5 @@ solveBtn.addEventListener("click", async () => {
     solveBtn.disabled = false;
 
 });
-
-// ============================
-// Load Game Initially
-// ============================
 
 initializeGame();

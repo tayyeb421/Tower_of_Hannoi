@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower of Hanoi Game</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Tower of Hanoi</h1>
+        <p>Move all disks from Tower A to Tower C without placing a larger disk on a smaller one.</p>
+    </header>
+
+    <!-- Controls -->
+    <section class="controls">
+
+        <div class="disk-select">
+            <label for="diskCount">Number of Disks</label>
+
+            <select id="diskCount">
+                <option value="3">3 Disks</option>
+                <option value="4">4 Disks</option>
+                <option value="5">5 Disks</option>
+                <option value="6">6 Disks</option>
+                <option value="7">7 Disks</option>
+            </select>
+        </div>
+
+        <button id="startBtn">Start Game</button>
+
+        <button id="restartBtn">
+            Restart
+        </button>
+
+        <button id="solveBtn">
+            Auto Solve
+        </button>
+
+    </section>
+
+    <!-- Game Info -->
+    <section class="game-info">
+
+        <div class="info-box">
+            <h3>Moves</h3>
+            <span id="moveCount">0</span>
+        </div>
+
+        <div class="info-box">
+            <h3>Minimum Moves</h3>
+            <span id="minimumMoves">7</span>
+        </div>
+
+        <div class="info-box">
+            <h3>Timer</h3>
+            <span id="timer">00 : 00</span>
+        </div>
+
+    </section>
+
+    <!-- Game Board -->
+    <section class="game-board">
+
+        <!-- Tower A -->
+        <div class="tower-container">
+
+            <h2>A</h2>
+
+            <div class="tower" id="tower1">
+
+                <div class="rod"></div>
+
+            </div>
+
+        </div>
+
+        <!-- Tower B -->
+        <div class="tower-container">
+
+            <h2>B</h2>
+
+            <div class="tower" id="tower2">
+
+                <div class="rod"></div>
+
+            </div>
+
+        </div>
+
+        <!-- Tower C -->
+        <div class="tower-container">
+
+            <h2>C</h2>
+
+            <div class="tower" id="tower3">
+
+                <div class="rod"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Rules -->
+    <section class="rules">
+
+        <h2>Game Rules</h2>
+
+        <ul>
+            <li>Move only one disk at a time.</li>
+            <li>Only the top disk can be moved.</li>
+            <li>A larger disk cannot be placed on a smaller disk.</li>
+            <li>Move all disks from Tower A to Tower C.</li>
+        </ul>
+
+    </section>
+
+    <!-- Win Popup -->
+    <div class="popup" id="popup">
+
+        <div class="popup-content">
+
+            <h2>🎉 Congratulations!</h2>
+
+            <p>You completed the Tower of Hanoi.</p>
+
+            <p>Total Moves :
+                <span id="finalMoves">0</span>
+            </p>
+
+            <button id="playAgain">
+                Play Again
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Developed using HTML, CSS & JavaScript
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

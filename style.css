@@ -1,0 +1,894 @@
+/* ============================
+   Google Font
+============================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ============================
+   Reset
+============================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ============================
+   Color Variables
+============================ */
+
+:root{
+
+    --bg1:#0b1120;
+    --bg2:#172554;
+    --bg3:#312e81;
+
+    --glass:rgba(255,255,255,.10);
+    --glass-border:rgba(255,255,255,.18);
+
+    --text:#ffffff;
+    --text-light:#cbd5e1;
+
+    --green:#22c55e;
+    --orange:#f59e0b;
+    --blue:#3b82f6;
+
+}
+
+/* ============================
+   Body
+============================ */
+
+body{
+
+    min-height:100vh;
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+    background:
+    radial-gradient(circle at top left,#3b82f655 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#9333ea55 0%,transparent 35%),
+    linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+
+    background-attachment:fixed;
+
+}
+
+/* ============================
+   Header
+============================ */
+
+header{
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+header h1{
+
+    font-size:3.2rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    background:linear-gradient(90deg,#38bdf8,#818cf8,#c084fc);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
+
+header p{
+
+    margin-top:15px;
+
+    color:var(--text-light);
+
+    max-width:750px;
+
+    margin-inline:auto;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+/* ============================
+   Controls (Premium)
+============================ */
+
+.controls{
+
+    width:90%;
+    max-width:950px;
+
+    margin:35px auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+
+    padding:20px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+/* ============================
+   Disk Select
+============================ */
+
+.disk-select{
+
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+
+}
+
+.disk-select label{
+
+    color:#e2e8f0;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.disk-select select{
+
+    width:180px;
+
+    padding:12px 15px;
+
+    border:none;
+    outline:none;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.15);
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    backdrop-filter:blur(12px);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.disk-select select:hover{
+
+    background:rgba(255,255,255,.22);
+
+}
+
+.disk-select select:focus{
+
+    border-color:#60a5fa;
+
+    box-shadow:0 0 15px rgba(96,165,250,.5);
+
+}
+
+/* Option */
+
+.disk-select option{
+
+    color:#111827;
+
+    background:#ffffff;
+
+}
+
+/* ============================
+   Buttons
+============================ */
+
+.controls button{
+
+    min-width:150px;
+
+    padding:13px 24px;
+
+    border:none;
+
+    border-radius:12px;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
+
+}
+
+/* Start */
+
+#startBtn{
+
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+
+}
+
+/* Restart */
+
+#restartBtn{
+
+    background:linear-gradient(135deg,#f59e0b,#ea580c);
+
+}
+
+/* Solve */
+
+#solveBtn{
+
+    background:linear-gradient(135deg,#3b82f6,#2563eb);
+
+}
+
+/* Hover */
+
+.controls button:hover{
+
+    transform:translateY(-5px) scale(1.04);
+
+    box-shadow:0 18px 30px rgba(0,0,0,.35);
+
+}
+
+/* Click */
+
+.controls button:active{
+
+    transform:scale(.96);
+
+}
+
+/* Disabled */
+
+.controls button:disabled{
+
+    opacity:.55;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+    box-shadow:none;
+
+}
+/* ============================
+   Game Info (Premium Cards)
+============================ */
+
+.game-info{
+
+    width:90%;
+    max-width:1000px;
+
+    margin:40px auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.info-box{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+
+}
+
+.info-box:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#60a5fa;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.35),
+    0 0 20px rgba(96,165,250,.35);
+
+}
+
+.info-box h3{
+
+    color:#cbd5e1;
+
+    font-size:18px;
+
+    margin-bottom:12px;
+
+}
+
+.info-box span{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#38bdf8;
+
+}
+
+/* ============================
+   Game Board
+============================ */
+
+.game-board{
+
+    width:95%;
+    max-width:1150px;
+
+    margin:60px auto;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:flex-end;
+
+    gap:30px;
+
+}
+
+/* ============================
+   Tower Container
+============================ */
+
+.tower-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    width:32%;
+
+}
+
+.tower-container h2{
+
+    margin-bottom:18px;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    text-shadow:0 0 12px rgba(59,130,246,.6);
+
+}
+
+/* ============================
+   Tower
+============================ */
+
+.tower{
+
+    position:relative;
+
+    width:280px;
+
+    height:340px;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+
+    border:2px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+    transition:.35s;
+
+    box-shadow:0 18px 35px rgba(0,0,0,.30);
+
+}
+
+.tower:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#38bdf8;
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.35),
+    0 0 25px rgba(56,189,248,.35);
+
+}
+
+/* Selected Tower */
+
+.tower.selected{
+
+    border-color:#22d3ee;
+
+    box-shadow:
+    0 0 20px rgba(34,211,238,.7),
+    0 0 40px rgba(34,211,238,.3);
+
+}
+
+/* ============================
+   Rod
+============================ */
+
+.rod{
+
+   
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:5px;
+
+    transform:translateX(-50%);
+
+    width:14px;
+
+    height:250px;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        to bottom,
+        #ffffff,
+        #f8fafc,
+        #cbd5e1,
+        #94a3b8
+    );
+
+    box-shadow:
+        inset 0 2px 4px rgba(255,255,255,.8),
+        0 4px 10px rgba(0,0,0,.25);
+
+}
+
+
+
+/* ============================
+   Base
+============================ */
+
+.tower::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:1px;
+
+    transform:translateX(-50%);
+
+    width:88%;
+
+    height:5px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        #94a3b8,
+        #ffffff,
+        #94a3b8
+    );
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.35);
+
+}
+/* ============================
+   Premium Disks
+============================ */
+
+.disk{
+
+    position:absolute;
+
+    left:50%;
+    transform:translateX(-50%);
+
+    height:30px;
+
+    border-radius:30px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:14px;
+    font-weight:700;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    border:2px solid rgba(255,255,255,.35);
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.35);
+
+    transition:all .35s ease;
+
+}
+
+/* Individual Disk Colors */
+
+.disk[data-size="1"]{
+    background:linear-gradient(135deg,#ff4d4d,#d90429);
+}
+
+.disk[data-size="2"]{
+    background:linear-gradient(135deg,#ff8c42,#ff6b00);
+}
+
+.disk[data-size="3"]{
+    background:linear-gradient(135deg,#ffd93d,#f4b400);
+    color:#111;
+}
+
+.disk[data-size="4"]{
+    background:linear-gradient(135deg,#38ef7d,#11998e);
+}
+
+.disk[data-size="5"]{
+    background:linear-gradient(135deg,#36d1dc,#5b86e5);
+}
+
+.disk[data-size="6"]{
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.disk[data-size="7"]{
+    background:linear-gradient(135deg,#ff6fd8,#3813c2);
+}
+
+/* Hover */
+
+.disk:hover{
+
+    transform:translateX(-50%) translateY(-5px) scale(1.05);
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,.6),
+        0 12px 25px rgba(0,0,0,.4);
+
+}
+
+/* Selected Disk */
+
+.disk.selected{
+
+    transform:translateX(-50%) translateY(-12px);
+
+    box-shadow:
+        0 0 20px #ffffff,
+        0 0 35px rgba(255,255,255,.7);
+
+}
+
+/* ============================
+   Rules Section
+============================ */
+
+.rules{
+
+    width:90%;
+    max-width:900px;
+
+    margin:60px auto;
+
+    padding:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:20px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+}
+
+.rules h2{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    color:#38bdf8;
+
+}
+
+.rules ul{
+
+    padding-left:22px;
+
+}
+
+.rules li{
+
+    margin:14px 0;
+
+    line-height:1.8;
+
+    color:#e2e8f0;
+
+}
+
+/* ============================
+   Premium Popup
+============================ */
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(8px);
+
+    z-index:999;
+
+}
+
+.popup.show{
+
+    display:flex;
+
+}
+
+.popup-content{
+
+    width:380px;
+
+    max-width:90%;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:linear-gradient(135deg,#ffffff,#f8fafc);
+
+    color:#111827;
+
+    animation:popup .35s ease;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.popup-content h2{
+
+    margin-bottom:15px;
+
+    color:#2563eb;
+
+}
+
+.popup-content p{
+
+    margin:12px 0;
+
+    font-size:18px;
+
+}
+
+.popup-content button{
+
+    margin-top:20px;
+
+    padding:12px 28px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#3b82f6,#2563eb);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.popup-content button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(37,99,235,.4);
+
+}
+
+/* ============================
+   Footer
+============================ */
+
+footer{
+
+    margin-top:50px;
+
+    padding:25px;
+
+    text-align:center;
+
+    color:#cbd5e1;
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+}
+
+/* ============================
+   Popup Animation
+============================ */
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.7);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ============================
+   Responsive
+============================ */
+
+@media(max-width:768px){
+
+    .game-info{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .game-board{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:40px;
+
+    }
+
+    .tower{
+
+        width:230px;
+
+        height:300px;
+
+    }
+
+    .rod{
+
+        height:220px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    header h1{
+
+        font-size:2.2rem;
+
+    }
+
+    header p{
+
+        font-size:15px;
+
+    }
+
+    .controls{
+
+        padding:15px;
+
+    }
+
+    .controls button{
+
+        width:100%;
+
+    }
+
+    .disk-select select{
+
+        width:100%;
+
+    }
+
+    .tower{
+
+        width:200px;
+
+        height:270px;
+
+    }
+
+}
